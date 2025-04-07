@@ -1,0 +1,228 @@
+/* site.css */
+
+/* Set base font size */
+html {
+    font-size: 14px;
+    text-decoration: none !important;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* Styling for focused elements */
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Set up base layout */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+/* Apply margin to body */
+body {
+    margin-bottom: 60px;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #8FE0B5 !important;
+}
+
+    /* Navbar Link Styling */
+    .navbar a {
+        color: black;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+/* Logo Styling */
+.logo {
+    max-width: 80px; /* Adjust the value to make the logo smaller */
+    height: auto;
+}
+
+/* Sign In Button Styling */
+.btn-sign-in {
+    color: black !important;
+    background-color: white !important;
+    border-color: #d3d3d3;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    margin-left: 3px; /* Adjust spacing as needed */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+    .btn-sign-in:hover {
+        background-color: #8FE0B5 !important;
+        border-color: #8FE0B5 !important;
+        color: white !important;
+    }
+
+/* Additional Navbar Styles */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
+    .navbar-nav .nav-item {
+        margin-right: 15px !important; /* Adjust spacing between links */
+    }
+
+        .navbar-nav .nav-item a {
+            color: black !important;
+            text-decoration: none !important;
+            transition: color 0.3s;
+        }
+
+            .navbar-nav .nav-item a:hover {
+                color: white !important;
+            }
+
+/* Additional Custom CSS for the search bar */
+.search-bar {
+    width: 35vw !important;
+    margin-left: 10px !important;
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* Add this class to the input element */
+.rounded-start {
+    border-top-left-radius: 20px !important;
+    border-bottom-left-radius: 20px !important;
+}
+
+/* Add this class to the "Sign In" button */
+.square-end {
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+}
+
+.rounded-end {
+    border-top-right-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+/* Add this to your existing CSS */
+.cart-icon {
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    margin-left: 10px; /* Adjust spacing as needed */
+}
+
+/* Container for the hero banner */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    max-height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+    border-radius: 20px; /* Rounded edges */
+}
+
+/* Hero banner image */
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Product rail container */
+.product-rail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Product card */
+/* Product card */
+.product-card {
+    margin-bottom: 20px;
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 10px;
+    transition: box-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+    .product-card:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    }
+
+/* Product description */
+.product-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none !important; /* Remove underline */
+}
+
+/* Product price */
+.product-price {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black; /* Set price color to black */
+    text-decoration: none !important; /* Remove underline */
+}
+
+/* Remove underline and set text color for anchor elements within product card */
+.product-card a,
+.product-card a:hover,
+.product-card a:visited {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+/* Product image */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Product description */
+.product-description {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-decoration: none !important; /* Remove underline */
+}
+
+/* Product price */
+.product-price {
+    margin-top: 5px;
+    font-weight: bold;
+    color: black; /* Set price color to black */
+    text-decoration: none !important; /* Remove underline */
+}
+
+/* Product description */
+.product-description a,
+.product-description a:hover,
+.product-description a:visited {
+    text-decoration: none !important;
+}
+
+/* Product price */
+.product-price a,
+.product-price a:hover,
+.product-price a:visited {
+    text-decoration: none !important;
+    color: black; /* Set the text color to black */
+}

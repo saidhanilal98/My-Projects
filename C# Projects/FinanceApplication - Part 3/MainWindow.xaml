@@ -1,0 +1,475 @@
+﻿<Window x:Class="ProgammingPOEPart3_ST10090106.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgammingPOEPart3_ST10090106"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <TabControl x:Name="myTabControl" Grid.RowSpan="3" Margin="0,0,0,-82">
+            <TabItem Header="Home " FontFamily="Arial Black" FontSize="14" BorderBrush="#FF00D100" Foreground="Black">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/1.jpg" Stretch="Fill"/>
+                    </StackPanel.Background>
+                    <Label Content="Welcome To BeAccurate Financial Application" FontFamily="Arial Black" FontSize="22"  HorizontalContentAlignment="Center" RenderTransformOrigin="0.5,0.5" Padding="0,200,0,10">
+                        <Label.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform AngleX="0"/>
+                                <RotateTransform/>
+                                <TranslateTransform X="0"/>
+                            </TransformGroup>
+                        </Label.RenderTransform>
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <Button x:Name="BtnStart" Content="Click To Begin" FontFamily="Arial Black" FontSize="16" Height="59" Width="208" Background="{x:Null}" Foreground="#FF00D100" Click="BtnClickStartButton" Padding="0,0,0,0" Margin="10"/>
+
+                </StackPanel>
+
+            </TabItem>
+
+
+            <TabItem Header="Expenses " FontFamily="Arial Black" FontWeight="Bold" FontSize="14" Height="20" VerticalAlignment="Top" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/4.jpg"/>
+                    </StackPanel.Background>
+                    <Label Content="Please enter your gross monthly income:" Padding="0,40,0,0" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="5,0,0,0" >
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="GrossMonthly" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter your income tax amount:" Width="789" HorizontalContentAlignment="Left">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="IncomeTax" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter your estimated monthly expenditure for groceries: ">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="MonthlyGroceries" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter your estimated monthly expenditure for water and lights:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="MonthlyWL" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter your estimated monthly expenditure for traveling: ">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="MonthlyTraveling" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter other expenses that you may have:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="MonthlyOtherExpenses" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Button x:Name="BtnExpenses" Content="Click To Continue" Background="{x:Null}" Foreground="#FF00D100" Height="68" Width="264" HorizontalContentAlignment="Center" Click="BtnClickExpenses" Margin="20"/>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Menu " HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="54" FontFamily="Arial Black" FontSize="14" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/10.jpg"/>
+                    </StackPanel.Background>
+                    <TextBox TextWrapping="Wrap" Text="Please click on which option you would like to choose below:" Width="796" Background="{x:Null}" FontSize="14" Height="74" HorizontalAlignment="Left" Padding="0,40,0,0" Margin="5,0,0,0">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Button x:Name="BtnRental" Content="Rental" Height="55" Width="238" Click="BtnClickRental" FontSize="18" Foreground="#FFF0F0F0"  Margin="10" HorizontalAlignment="Left">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="BtnProperty" Content="Property" Height="55" Width="238" Click="BtnClickProperty" FontSize="18" Margin="10" HorizontalAlignment="Left">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="BtnVehicle" Content="Vehicle" Height="55" Width="238" Click="BtnClickVehicle" FontSize="18" Margin="10" HorizontalAlignment="Left">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="BtnBalance" Content="Balance" Height="55" Width="238" Click="BtnClickBalance" FontSize="18" Margin="10" HorizontalAlignment="Left">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Button.Foreground>
+                    </Button>
+                    <Button x:Name="BtnSavings" Content="Savings" Height="55" Width="238" Click="BtnClickSavings" FontSize="18" Margin="10" HorizontalAlignment="Left">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <Button.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Button.Foreground>
+                    </Button>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Rental " HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="116" Margin="0,-1,0,0" FontFamily="Arial Black" FontSize="14" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/8.jpg"/>
+                    </StackPanel.Background>
+                    <Label Content="Please enter the rental amount if you are planning on renting" Padding="0,40,0,0" Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="RentalTextbox" TextWrapping="Wrap" Width="790" Background="{x:Null}" Height="33">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Label Content="Thank you!" Height="160" Width="376" FontSize="36" Foreground="#FF00D100" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Property " HorizontalAlignment="Center" Width="114" Margin="0,-1,0,1" FontFamily="Arial Black" FontSize="14" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/6.jpg"/>
+                    </StackPanel.Background>
+                    <Label Content="Please enter the purchase price of the property for the home loan: " Padding="0,40,0,0" Margin="6,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="PurchasePrice_TextBox" TextWrapping="Wrap" Width="790" Background="{x:Null}" Height="33">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the total deposit for the home loan: " Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="PropertyDeposit_Textbox" TextWrapping="Wrap" Width="790" Background="{x:Null}" Height="33">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the interest rate (%) for the home loan: " Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="PropertyInterestRate_Textbox" TextWrapping="Wrap" Width="790" Background="{x:Null}" Height="33">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the number of months to repay (between 240 and 360) for the home loan: " Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="RepaymentMonths_Textbox" TextWrapping="Wrap" Width="790" Background="{x:Null}" Height="33">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Button x:Name="BtnHomeLoanCalculation" Content="Calculate Home Loan Monthly Replayments" Background="{x:Null}" Foreground="#FF00D100" Height="73" Width="355" HorizontalContentAlignment="Center" Click="BtnClickCalHomeLoan" Margin="20"/>
+                    <Label Content="The home loan monthly repayment amount is shown below:" Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="RepaymentHomeLoan_DisplayedTextbox" TextWrapping="Wrap" Width="790" Background="{x:Null}" Height="33">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Vehicle" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="98" Margin="0,-1,0,0" FontFamily="Arial Black" FontSize="14" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="530" Margin="0,0,-6,0" Orientation="Vertical" HorizontalAlignment="Right" Width="800">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/7.jpg" Stretch="Fill"/>
+                    </StackPanel.Background>
+                    <Label Content="Please enter the model of the vehicle that you would like to buy:" Padding="0,40,0,0" Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="vehicleModel" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the make of the vehicle that you would like to buy:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="vehicleMake" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the purchase price of the vehicle:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="vehiclepp" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the total deposit of the vehicle:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="vehicletp" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the interest rate(%)  of the vehicle:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="vehicleir" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the price of the estimated insurance premium of the vehicle:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="vehicleip" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Button x:Name="BtnVehicleReportCalculation" Content="Click To View The Vehicle Report" Background="{x:Null}" Foreground="#FF00D100" Height="43" Width="303" HorizontalContentAlignment="Center" Click="BtnClickCalVehicle" HorizontalAlignment="Left" Margin="20"/>
+                    <TextBox x:Name="vehicleReport" TextWrapping="Wrap" Width="656" Background="{x:Null}" Height="110" RenderTransformOrigin="0.499,0.901" HorizontalAlignment="Left">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Balance" HorizontalAlignment="Right" Height="20" VerticalAlignment="Top" Width="134" Margin="0,-1,0,0" FontFamily="Arial Black" FontSize="14" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/5.jpg"/>
+                    </StackPanel.Background>
+                    <Button x:Name="BtnCalculateMoneyAvailable" Content="Calculate Your Available Money" Background="{x:Null}" Foreground="#FF00D100" Height="73" Width="355" HorizontalContentAlignment="Center" Click="BtnClickCalBalance" FontSize="18" Margin="40"/>
+                    <TextBlock TextWrapping="Wrap" Height="30" Text="Money available after all the specified deductions: " Margin="5,0,0,0">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBlock>
+                    <TextBox x:Name="AvailableMoney_Displayed" TextWrapping="Wrap" Width="795" Background="{x:Null}" Height="30" HorizontalAlignment="Left">
+                        <TextBox.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBox.Foreground>
+                    </TextBox>
+                    <Label Content="Thank you!" Height="99" Width="379" FontSize="36" Foreground="#FF00D100" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" Margin="20"/>
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Savings" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="73" FontFamily="Arial Black" FontSize="14" Margin="0,-1,0,0" BorderBrush="#FF00D100">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#FFF0F0F0"/>
+                        <GradientStop Color="#FF00D100" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <StackPanel Height="540">
+                    <StackPanel.Background>
+                        <ImageBrush ImageSource="/9.jpg"/>
+                    </StackPanel.Background>
+                    <Label Content="Please enter an amount that you would like to save:" Padding="0,40,0,0" Height="60" Margin="5,0,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="Amount_Saved" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the interest rate:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="InterestRate_Saved" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Please enter the period that it would take you to reach your goal:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="Period_Years" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Button x:Name="BtnTotal_MonthlySavings" Content="Calculate Your Total Savings And Monthly Savings Amount" Background="{x:Null}" Foreground="#FF00D100" Height="73" Width="602" HorizontalContentAlignment="Center" Click="BtnClickCalSavings" FontSize="18" HorizontalAlignment="Center" Margin="20"/>
+                    <Label Content="The total savings amount is shown below:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="TotalSavings_Displayed" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="The monthly savings amount is shown below:">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </Label.Foreground>
+                    </Label>
+                    <TextBox x:Name="MonthlySavings_Displayed" TextWrapping="Wrap" Height="30" Background="{x:Null}">
+                        <TextBlock.Foreground>
+                            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlColorKey}}"/>
+                        </TextBlock.Foreground>
+                    </TextBox>
+                    <Label Content="Thank you for using BeAccurate Finance Application!" Height="37" Width="572" FontSize="18" Foreground="#FF00D100" VerticalContentAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="20"/>
+                </StackPanel>
+            </TabItem>
+
+
+        </TabControl>
+        <TextBox HorizontalAlignment="Left" Margin="904,22,0,0" Grid.RowSpan="3" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+###******************************AUTH**************************************
+###API to register a new user
+POST https://localhost:3000/api/users/register HTTP/1.1
+Content-type: application/json
+
+{
+    "username": "education_department",
+    "password": "educationdep"
+}
+###
+
+###API to login a user and get a token as a response
+
+POST https://localhost:3000/api/users/login HTTP/1.1
+Content-type: application/json
+
+{
+    "username": "education_department",
+    "password": "educationdep"
+}
+###
+###*************************************************************************
+
+
+###API to Get the posts on the bulletin board
+GET https://localhost:3000/api/posts HTTP/1.1
+###
+
+###API to post a new post on the bulletin board
+
+POST https://localhost:3000/api/posts HTTP/1.1
+Content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVkdWNhdGlvbl9kZXBhcnRtZW50IiwidXNlcmlkIjoiNjUyNTg0ZjAzZmRlNGJlYTFkZWY2ZGJkIiwiaWF0IjoxNjk2OTU4OTA1LCJleHAiOjE2OTY5NjI1MDV9.wu11hJFy2HeQV7LpPy-hImCPkZd0QbDs_Z-BWjfBoz8
+
+{
+    "id": "35",
+    "department": "education",
+    "issue": "Teachers not teaching the children properly"
+}
+###
+
+###API to delete the post on the bulletin board using the post id
+
+DELETE https://localhost:3000/api/posts/65258a023fde4bea1def6dc1 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVkdWNhdGlvbl9kZXBhcnRtZW50IiwidXNlcmlkIjoiNjUyNTg0ZjAzZmRlNGJlYTFkZWY2ZGJkIiwiaWF0IjoxNjk2OTU4OTA1LCJleHAiOjE2OTY5NjI1MDV9.wu11hJFy2HeQV7LpPy-hImCPkZd0QbDs_Z-BWjfBoz8
+###
+

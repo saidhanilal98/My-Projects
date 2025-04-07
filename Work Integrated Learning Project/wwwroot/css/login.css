@@ -1,0 +1,53 @@
+﻿html {
+    font-size: 14px;
+    text-decoration: none !important;
+}
+
+/* Logo Styling */
+.logo {
+    max-width: 80px; /* Adjust the value to make the logo smaller */
+    height: auto;
+}
+
+/* Sign In Button Styling */
+.btn-sign-in {
+    color: black !important;
+    background-color: white !important;
+    border-color: #d3d3d3;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    margin-left: 3px; /* Adjust spacing as needed */
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+    .btn-sign-in:hover {
+        background-color: #8FE0B5 !important;
+        border-color: #8FE0B5 !important;
+        color: white !important;
+    }
+
+/* Responsive layout */
+*{
+    box-sizing: border-box;
+}
+
+.colContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column1 {
+    flex: 70%;
+    padding: 5px;
+}
+
+.column2 {
+    flex: 30%;
+    padding: 5px;
+}
+
+@media (max-width: 50%) {
+    .colContainer, .nav {
+        flex-direction: column;
+    }
+}

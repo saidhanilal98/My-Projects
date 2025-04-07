@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store Page</title>
+</head>
+<body>
+    <div class="hero-banner">
+        <img src="https://scontent-jnb1-1.xx.fbcdn.net/v/t39.30808-6/363785827_699394228868760_303344092603168402_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=813123&_nc_ohc=vFEtJP06r6AAX-eJ3xz&_nc_ht=scontent-jnb1-1.xx&oh=00_AfCKUCQDUslJSJqeVHh_vcA0HcsFAyiEY9rx2TWU2C8WJw&oe=65115663" alt="Hero Banner Image" class="hero-image">
+    </div>
+
+    <div class="product-rail">
+        <!-- Product cards go here -->
+        @for (int i = 1; i <= 16; i++)
+        {
+            <a href="/product/@i" class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-2hWAoBTDneflj7eSaJYKJ4P2EquSrxH0oS-jAaW5rUS3_-Y92pGLm_rTaXKBupQ72Q&usqp=CAU" alt="Product Image" class="product-image">
+                <div class="product-description">
+                    Product @i Description
+                </div>
+                <div class="product-price">
+                    R00.00
+                </div>
+            </a>
+        }
+    </div>
+</body>
+</html>
